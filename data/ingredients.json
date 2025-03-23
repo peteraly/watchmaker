@@ -1,0 +1,843 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "id": "humectants",
+      "name": "Humectants",
+      "description": "Ingredients that attract and hold moisture"
+    },
+    {
+      "id": "emollients",
+      "name": "Emollients",
+      "description": "Ingredients that soften and smooth the skin"
+    },
+    {
+      "id": "occlusives",
+      "name": "Occlusives",
+      "description": "Ingredients that create a barrier to prevent water loss"
+    },
+    {
+      "id": "antioxidants",
+      "name": "Antioxidants",
+      "description": "Ingredients that protect against environmental damage"
+    },
+    {
+      "id": "exfoliants",
+      "name": "Exfoliants",
+      "description": "Ingredients that remove dead skin cells"
+    },
+    {
+      "id": "soothing",
+      "name": "Soothing Agents",
+      "description": "Ingredients that calm and reduce irritation"
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "hyaluronic-acid",
+      "name": "Hyaluronic Acid",
+      "categories": ["humectants"],
+      "description": "A powerful humectant that can hold up to 1000x its weight in water",
+      "benefits": [
+        "Hydration",
+        "Plumping",
+        "Fine line reduction"
+      ],
+      "cautions": [
+        "May need to be used with an occlusive in dry environments"
+      ],
+      "goodFor": [
+        "all",
+        "dry",
+        "dehydrated"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Sodium Hyaluronate",
+        "Hydrolyzed Hyaluronic Acid"
+      ],
+      "concentration": {
+        "recommended": "1-2%",
+        "max": "2%"
+      },
+      "pairsWith": [
+        "glycerin",
+        "ceramides",
+        "peptides"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "niacinamide",
+      "name": "Niacinamide",
+      "categories": ["antioxidants"],
+      "description": "Form of Vitamin B3 that helps with multiple skin concerns",
+      "benefits": [
+        "Oil control",
+        "Pore reduction",
+        "Brightening",
+        "Barrier strengthening"
+      ],
+      "cautions": [
+        "May cause flushing at high concentrations"
+      ],
+      "goodFor": [
+        "all",
+        "oily",
+        "acne-prone",
+        "aging"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Vitamin B3",
+        "Nicotinamide"
+      ],
+      "concentration": {
+        "recommended": "2-5%",
+        "max": "10%"
+      },
+      "pairsWith": [
+        "hyaluronic-acid",
+        "peptides",
+        "antioxidants"
+      ],
+      "conflicts": [
+        "vitamin-c"
+      ]
+    },
+    {
+      "id": "centella-asiatica",
+      "name": "Centella Asiatica",
+      "categories": ["soothing", "antioxidants"],
+      "description": "Traditional herb known for its healing and soothing properties",
+      "benefits": [
+        "Skin soothing",
+        "Redness reduction",
+        "Wound healing",
+        "Collagen production"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "sensitive",
+        "acne-prone",
+        "aging",
+        "all"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Cica",
+        "Gotu Kola",
+        "Madecassoside",
+        "Asiaticoside"
+      ],
+      "concentration": {
+        "recommended": "0.1-5%",
+        "max": "10%"
+      },
+      "pairsWith": [
+        "hyaluronic-acid",
+        "niacinamide",
+        "peptides"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "snail-mucin",
+      "name": "Snail Mucin",
+      "categories": ["humectants", "soothing"],
+      "description": "Natural ingredient rich in glycoproteins, hyaluronic acid, and glycolic acid",
+      "benefits": [
+        "Hydration",
+        "Wound healing",
+        "Texture improvement",
+        "Soothing"
+      ],
+      "cautions": [
+        "Patch test recommended for first-time users",
+        "Not suitable for those with shellfish allergies"
+      ],
+      "goodFor": [
+        "all",
+        "acne-prone",
+        "aging",
+        "dry"
+      ],
+      "avoidFor": [
+        "shellfish-allergies"
+      ],
+      "commonNames": [
+        "Snail Secretion Filtrate",
+        "Snail Extract"
+      ],
+      "concentration": {
+        "recommended": "92-96%",
+        "max": "100%"
+      },
+      "pairsWith": [
+        "hyaluronic-acid",
+        "niacinamide",
+        "centella-asiatica"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "vitamin-c",
+      "name": "Vitamin C",
+      "categories": ["antioxidants"],
+      "description": "Powerful antioxidant that brightens skin and fights free radical damage",
+      "benefits": [
+        "Brightening",
+        "Collagen production",
+        "Sun damage protection",
+        "Dark spot reduction"
+      ],
+      "cautions": [
+        "Can be unstable in certain formulations",
+        "May cause sensitivity in high concentrations",
+        "Best used in morning routines"
+      ],
+      "goodFor": [
+        "all",
+        "aging",
+        "hyperpigmentation",
+        "dullness"
+      ],
+      "avoidFor": [
+        "very-sensitive"
+      ],
+      "commonNames": [
+        "L-Ascorbic Acid",
+        "Ascorbyl Glucoside",
+        "Magnesium Ascorbyl Phosphate"
+      ],
+      "concentration": {
+        "recommended": "10-15%",
+        "max": "20%"
+      },
+      "pairsWith": [
+        "vitamin-e",
+        "ferulic-acid"
+      ],
+      "conflicts": [
+        "niacinamide",
+        "retinol"
+      ]
+    },
+    {
+      "id": "beta-glucan",
+      "name": "Beta Glucan",
+      "categories": ["humectants", "soothing"],
+      "description": "Natural compound derived from yeast, mushrooms, and grains that deeply hydrates and soothes skin",
+      "benefits": [
+        "Deep hydration",
+        "Barrier repair",
+        "Soothing",
+        "Anti-inflammatory"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "all",
+        "sensitive",
+        "dry",
+        "irritated"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "β-Glucan",
+        "Beta-1,3-Glucan"
+      ],
+      "concentration": {
+        "recommended": "0.5-1%",
+        "max": "2%"
+      },
+      "pairsWith": [
+        "hyaluronic-acid",
+        "centella-asiatica",
+        "ceramides"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "green-tea",
+      "name": "Green Tea Extract",
+      "categories": ["antioxidants", "soothing"],
+      "description": "Rich in polyphenols and catechins that protect and calm the skin",
+      "benefits": [
+        "Oil control",
+        "Antioxidant protection",
+        "Soothing",
+        "Anti-aging"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "all",
+        "oily",
+        "acne-prone",
+        "sensitive"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Camellia Sinensis Leaf Extract",
+        "EGCG",
+        "Green Tea Catechins"
+      ],
+      "concentration": {
+        "recommended": "1-5%",
+        "max": "10%"
+      },
+      "pairsWith": [
+        "niacinamide",
+        "hyaluronic-acid",
+        "centella-asiatica"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "rice-extract",
+      "name": "Rice Extract",
+      "categories": ["humectants", "antioxidants"],
+      "description": "Traditional Asian beauty ingredient known for its brightening and moisturizing properties",
+      "benefits": [
+        "Skin brightening",
+        "Moisture retention",
+        "UV protection",
+        "Antioxidant effects"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "all",
+        "dull",
+        "dry",
+        "sensitive"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Oryza Sativa Extract",
+        "Rice Bran Extract",
+        "Rice Ferment Filtrate"
+      ],
+      "concentration": {
+        "recommended": "1-5%",
+        "max": "10%"
+      },
+      "pairsWith": [
+        "niacinamide",
+        "hyaluronic-acid",
+        "green-tea"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "propolis",
+      "name": "Propolis Extract",
+      "categories": ["antioxidants", "soothing"],
+      "description": "Natural bee product with antibacterial and healing properties",
+      "benefits": [
+        "Antibacterial action",
+        "Wound healing",
+        "Barrier protection",
+        "Anti-inflammatory"
+      ],
+      "cautions": [
+        "Patch test recommended for bee allergies"
+      ],
+      "goodFor": [
+        "all",
+        "acne-prone",
+        "sensitive",
+        "damaged"
+      ],
+      "avoidFor": [
+        "bee-allergies"
+      ],
+      "commonNames": [
+        "Propolis Cera",
+        "Bee Propolis",
+        "Propolis Extract"
+      ],
+      "concentration": {
+        "recommended": "1-3%",
+        "max": "5%"
+      },
+      "pairsWith": [
+        "honey-extract",
+        "centella-asiatica",
+        "hyaluronic-acid"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "galactomyces",
+      "name": "Galactomyces Ferment Filtrate",
+      "categories": ["antioxidants", "humectants"],
+      "description": "Fermented yeast extract that improves skin tone and texture",
+      "benefits": [
+        "Brightening",
+        "Pore refinement",
+        "Moisture balance",
+        "Cell turnover"
+      ],
+      "cautions": [
+        "May not suit fungal acne-prone skin"
+      ],
+      "goodFor": [
+        "all",
+        "dull",
+        "uneven",
+        "large-pores"
+      ],
+      "avoidFor": [
+        "fungal-acne"
+      ],
+      "commonNames": [
+        "Galactomyces",
+        "Pitera",
+        "Saccharomycopsis Ferment Filtrate"
+      ],
+      "concentration": {
+        "recommended": "90-95%",
+        "max": "100%"
+      },
+      "pairsWith": [
+        "niacinamide",
+        "vitamin-c",
+        "hyaluronic-acid"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "madecassoside",
+      "name": "Madecassoside",
+      "categories": ["soothing", "antioxidants"],
+      "description": "Active compound from Centella Asiatica known for healing and anti-inflammatory properties",
+      "benefits": [
+        "Wound healing",
+        "Anti-inflammatory",
+        "Collagen synthesis",
+        "Skin barrier repair"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "sensitive",
+        "damaged",
+        "aging",
+        "acne-prone"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Madecassic Acid",
+        "Asiaticoside",
+        "Centella Asiatica Extract"
+      ],
+      "concentration": {
+        "recommended": "0.1-1%",
+        "max": "2%"
+      },
+      "pairsWith": [
+        "panthenol",
+        "niacinamide",
+        "ceramides"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "panthenol",
+      "name": "Panthenol",
+      "categories": ["humectants", "soothing"],
+      "description": "Pro-vitamin B5 that deeply hydrates and supports skin barrier function",
+      "benefits": [
+        "Deep hydration",
+        "Barrier repair",
+        "Wound healing",
+        "Anti-inflammatory"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "all",
+        "sensitive",
+        "damaged",
+        "dehydrated"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Pro-Vitamin B5",
+        "D-Panthenol",
+        "Dexpanthenol"
+      ],
+      "concentration": {
+        "recommended": "0.5-5%",
+        "max": "10%"
+      },
+      "pairsWith": [
+        "hyaluronic-acid",
+        "niacinamide",
+        "ceramides"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "artemisia",
+      "name": "Artemisia Extract",
+      "categories": ["soothing", "antioxidants"],
+      "description": "Traditional Korean herb known for its calming and anti-inflammatory properties",
+      "benefits": [
+        "Skin soothing",
+        "Redness reduction",
+        "Barrier strengthening",
+        "Antioxidant protection"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "sensitive",
+        "redness",
+        "irritated",
+        "all"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Mugwort Extract",
+        "Artemisia Princeps Extract",
+        "Ssuk Extract"
+      ],
+      "concentration": {
+        "recommended": "70-100%",
+        "max": "100%"
+      },
+      "pairsWith": [
+        "centella-asiatica",
+        "panthenol",
+        "beta-glucan"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "licorice-root",
+      "name": "Licorice Root Extract",
+      "categories": ["antioxidants", "soothing"],
+      "description": "Natural brightening ingredient with anti-inflammatory properties",
+      "benefits": [
+        "Brightening",
+        "Soothing",
+        "Anti-inflammatory",
+        "Melanin inhibition"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "hyperpigmentation",
+        "sensitive",
+        "redness",
+        "uneven-tone"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Glycyrrhiza Glabra Root Extract",
+        "Dipotassium Glycyrrhizate",
+        "Glabridin"
+      ],
+      "concentration": {
+        "recommended": "0.5-2%",
+        "max": "4%"
+      },
+      "pairsWith": [
+        "niacinamide",
+        "vitamin-c",
+        "alpha-arbutin"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "bifida-ferment",
+      "name": "Bifida Ferment Lysate",
+      "categories": ["antioxidants", "soothing"],
+      "description": "Probiotic ingredient that strengthens skin barrier and provides anti-aging benefits",
+      "benefits": [
+        "Barrier repair",
+        "Anti-aging",
+        "UV protection",
+        "Moisture retention"
+      ],
+      "cautions": [
+        "May not suit those with fungal acne"
+      ],
+      "goodFor": [
+        "aging",
+        "sensitive",
+        "damaged",
+        "all"
+      ],
+      "avoidFor": [
+        "fungal-acne"
+      ],
+      "commonNames": [
+        "Bifida Ferment",
+        "Bifida Ferment Filtrate"
+      ],
+      "concentration": {
+        "recommended": "90-95%",
+        "max": "100%"
+      },
+      "pairsWith": [
+        "niacinamide",
+        "peptides",
+        "ceramides"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "allantoin",
+      "name": "Allantoin",
+      "categories": ["soothing", "humectants"],
+      "description": "Gentle soothing ingredient that promotes cell regeneration and skin healing",
+      "benefits": [
+        "Skin healing",
+        "Cell regeneration",
+        "Moisturizing",
+        "Soothing"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "sensitive",
+        "irritated",
+        "dry",
+        "all"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Aluminum Dihydroxy Allantoinate",
+        "Glyoxyl Diureide"
+      ],
+      "concentration": {
+        "recommended": "0.1-2%",
+        "max": "2%"
+      },
+      "pairsWith": [
+        "panthenol",
+        "centella-asiatica",
+        "beta-glucan"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "ceramides",
+      "name": "Ceramides",
+      "categories": ["emollients", "occlusives"],
+      "description": "Lipid molecules that are essential for skin barrier function and moisture retention",
+      "benefits": [
+        "Barrier repair",
+        "Moisture retention",
+        "Anti-aging",
+        "Protection"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "dry",
+        "sensitive",
+        "aging",
+        "damaged"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Ceramide NP",
+        "Ceramide AP",
+        "Ceramide EOP"
+      ],
+      "concentration": {
+        "recommended": "0.1-1%",
+        "max": "2%"
+      },
+      "pairsWith": [
+        "cholesterol",
+        "fatty-acids",
+        "hyaluronic-acid"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "peptides",
+      "name": "Peptides",
+      "categories": ["antioxidants"],
+      "description": "Short chains of amino acids that signal skin cells to perform specific functions",
+      "benefits": [
+        "Collagen production",
+        "Skin firming",
+        "Wrinkle reduction",
+        "Barrier repair"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "aging",
+        "fine-lines",
+        "sagging",
+        "all"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Copper Peptides",
+        "Matrixyl",
+        "Argireline"
+      ],
+      "concentration": {
+        "recommended": "2-10%",
+        "max": "20%"
+      },
+      "pairsWith": [
+        "hyaluronic-acid",
+        "niacinamide",
+        "ceramides"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "alpha-arbutin",
+      "name": "Alpha Arbutin",
+      "categories": ["antioxidants"],
+      "description": "Stable form of arbutin that inhibits melanin production for brightening effects",
+      "benefits": [
+        "Brightening",
+        "Dark spot reduction",
+        "Even skin tone",
+        "Sun damage repair"
+      ],
+      "cautions": [
+        "Use sunscreen during daytime use",
+        "Start with lower concentrations"
+      ],
+      "goodFor": [
+        "hyperpigmentation",
+        "uneven-tone",
+        "sun-damage",
+        "melasma"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Alpha-Arbutin",
+        "α-Arbutin"
+      ],
+      "concentration": {
+        "recommended": "1-2%",
+        "max": "2%"
+      },
+      "pairsWith": [
+        "vitamin-c",
+        "niacinamide",
+        "licorice-root"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "adenosine",
+      "name": "Adenosine",
+      "categories": ["antioxidants"],
+      "description": "Yeast-derived ingredient that promotes collagen production and skin healing",
+      "benefits": [
+        "Wrinkle reduction",
+        "Skin firming",
+        "Wound healing",
+        "Anti-inflammatory"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "aging",
+        "wrinkles",
+        "damaged",
+        "all"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "Adenosine Triphosphate",
+        "ATP"
+      ],
+      "concentration": {
+        "recommended": "0.04-0.1%",
+        "max": "0.1%"
+      },
+      "pairsWith": [
+        "peptides",
+        "niacinamide",
+        "retinol"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "beta-hydroxy-acid",
+      "name": "Beta Hydroxy Acid",
+      "categories": ["exfoliants"],
+      "description": "Oil-soluble exfoliant that penetrates pores to remove excess sebum and dead skin cells",
+      "benefits": [
+        "Pore clearing",
+        "Acne prevention",
+        "Oil control",
+        "Texture improvement"
+      ],
+      "cautions": [
+        "Start with lower concentrations",
+        "Use sunscreen during daytime use",
+        "May cause initial purging",
+        "Not recommended for very dry or sensitive skin"
+      ],
+      "goodFor": [
+        "oily",
+        "acne-prone",
+        "large-pores",
+        "blackheads"
+      ],
+      "avoidFor": [
+        "very-dry",
+        "very-sensitive"
+      ],
+      "commonNames": [
+        "Salicylic Acid",
+        "BHA",
+        "Betaine Salicylate"
+      ],
+      "concentration": {
+        "recommended": "0.5-2%",
+        "max": "2%"
+      },
+      "pairsWith": [
+        "niacinamide",
+        "panthenol",
+        "centella-asiatica"
+      ],
+      "conflicts": [
+        "retinol",
+        "vitamin-c",
+        "aha"
+      ]
+    },
+    {
+      "id": "polyglutamic-acid",
+      "name": "Polyglutamic Acid",
+      "categories": ["humectants"],
+      "description": "Powerful humectant derived from fermented soybeans that can hold 4-5 times more moisture than hyaluronic acid",
+      "benefits": [
+        "Intense hydration",
+        "Plumping",
+        "Barrier protection",
+        "Elasticity improvement"
+      ],
+      "cautions": [],
+      "goodFor": [
+        "dry",
+        "dehydrated",
+        "aging",
+        "all"
+      ],
+      "avoidFor": [],
+      "commonNames": [
+        "PGA",
+        "Poly-γ-Glutamic Acid"
+      ],
+      "concentration": {
+        "recommended": "0.1-1%",
+        "max": "3%"
+      },
+      "pairsWith": [
+        "hyaluronic-acid",
+        "ceramides",
+        "peptides"
+      ],
+      "conflicts": []
+    }
+  ]
+} 

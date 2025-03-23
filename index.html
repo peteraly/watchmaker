@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Beauty Skincare Advisor</title>
+    <meta name="description" content="Discover your perfect Korean skincare routine based on your skin type and concerns">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>K-Beauty Skincare Advisor</h1>
+            <p class="tagline">Discover your perfect Korean-inspired skincare routine</p>
+        </header>
+
+        <!-- Main Content Sections -->
+        <main>
+            <!-- Introduction Section (Initial View) -->
+            <section id="intro" class="active-section">
+                <h2>Let's find your perfect routine</h2>
+                <p>Answer a few questions about your skin to get a personalized Korean skincare routine with product recommendations.</p>
+                <div class="intro-cards">
+                    <div class="intro-card">
+                        <img src="img/icons/philosophy/hydration.svg" alt="Hydration">
+                        <h3>Hydration-focused</h3>
+                        <p>Korean skincare emphasizes keeping skin thoroughly moisturized</p>
+                    </div>
+                    <div class="intro-card">
+                        <img src="img/icons/philosophy/prevention.svg" alt="Prevention">
+                        <h3>Prevention-first</h3>
+                        <p>Focus on preventing issues rather than just treating them</p>
+                    </div>
+                    <div class="intro-card">
+                        <img src="img/icons/philosophy/layering.svg" alt="Layering">
+                        <h3>Strategic layering</h3>
+                        <p>Products are applied in specific order for maximum effectiveness</p>
+                    </div>
+                </div>
+                <button id="start-btn" class="primary-btn">Start Assessment</button>
+            </section>
+
+            <!-- Assessment Section -->
+            <section id="assessment" class="hidden-section">
+                <div class="progress-bar">
+                    <div class="progress-indicator" style="width: 20%"></div>
+                </div>
+                
+                <!-- Response Preview Panel -->
+                <div class="response-preview">
+                    <h3>Your Selections</h3>
+                    <div class="preview-items">
+                        <div class="preview-item" id="preview-skin-type">
+                            <span class="preview-label">Skin Type:</span>
+                            <span class="preview-value">Not selected</span>
+                        </div>
+                        <div class="preview-item" id="preview-primary-concern">
+                            <span class="preview-label">Primary Concern:</span>
+                            <span class="preview-value">Not selected</span>
+                        </div>
+                        <div class="preview-item" id="preview-secondary-concern">
+                            <span class="preview-label">Secondary Concern:</span>
+                            <span class="preview-value">Not selected</span>
+                        </div>
+                        <div class="preview-item" id="preview-budget">
+                            <span class="preview-label">Budget:</span>
+                            <span class="preview-value">Not selected</span>
+                        </div>
+                        <div class="preview-item" id="preview-steps">
+                            <span class="preview-label">Routine Steps:</span>
+                            <span class="preview-value">Not selected</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="question-counter">Question <span id="current-question">1</span> of <span id="total-questions">5</span></p>
+                
+                <!-- Question 1: Skin Type -->
+                <div id="q1" class="question active-question">
+                    <h2>What is your skin type?</h2>
+                    <div class="options skin-type-options">
+                        <div class="option" data-value="dry">
+                            <img src="img/icons/skin-types/dry.svg" alt="Dry skin">
+                            <h3>Dry</h3>
+                            <p>Skin feels tight, may have flaky patches</p>
+                        </div>
+                        <div class="option" data-value="oily">
+                            <img src="img/icons/skin-types/oily.svg" alt="Oily skin">
+                            <h3>Oily</h3>
+                            <p>Shiny appearance, especially in T-zone</p>
+                        </div>
+                        <div class="option" data-value="combination">
+                            <img src="img/icons/skin-types/combination.svg" alt="Combination skin">
+                            <h3>Combination</h3>
+                            <p>Oily T-zone, normal or dry cheeks</p>
+                        </div>
+                        <div class="option" data-value="normal">
+                            <img src="img/icons/skin-types/normal.svg" alt="Normal skin">
+                            <h3>Normal</h3>
+                            <p>Neither too oily nor too dry</p>
+                        </div>
+                        <div class="option" data-value="sensitive">
+                            <img src="img/icons/skin-types/sensitive.svg" alt="Sensitive skin">
+                            <h3>Sensitive</h3>
+                            <p>Easily irritated, may be redness-prone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2: Primary Concern -->
+                <div id="q2" class="question hidden-question">
+                    <h2>What is your primary skin concern?</h2>
+                    <div class="options concern-options">
+                        <div class="option" data-value="acne">
+                            <img src="img/icons/concerns/acne.svg" alt="Acne">
+                            <h3>Acne</h3>
+                            <p>Breakouts, blemishes, clogged pores</p>
+                        </div>
+                        <div class="option" data-value="aging">
+                            <img src="img/icons/concerns/aging.svg" alt="Aging">
+                            <h3>Aging</h3>
+                            <p>Fine lines, wrinkles, loss of firmness</p>
+                        </div>
+                        <div class="option" data-value="dullness">
+                            <img src="img/icons/concerns/dullness.svg" alt="Dullness">
+                            <h3>Dullness</h3>
+                            <p>Lack of radiance, uneven skin tone</p>
+                        </div>
+                        <div class="option" data-value="hyperpigmentation">
+                            <img src="img/icons/concerns/pigmentation.svg" alt="Hyperpigmentation">
+                            <h3>Pigmentation</h3>
+                            <p>Dark spots, uneven tone, sun damage</p>
+                        </div>
+                        <div class="option" data-value="dryness">
+                            <img src="img/icons/concerns/dryness.svg" alt="Dryness">
+                            <h3>Dryness</h3>
+                            <p>Flakiness, tight feeling, dehydration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3: Secondary Concern -->
+                <div id="q3" class="question hidden-question">
+                    <h2>What is your secondary skin concern?</h2>
+                    <div class="options concern-options">
+                        <div class="option" data-value="redness">
+                            <img src="img/icons/concerns/redness.svg" alt="Redness">
+                            <h3>Redness</h3>
+                            <p>Flushing, irritation, reactivity</p>
+                        </div>
+                        <div class="option" data-value="texture">
+                            <img src="img/icons/concerns/texture.svg" alt="Texture">
+                            <h3>Texture</h3>
+                            <p>Rough skin, bumps, uneven surface</p>
+                        </div>
+                        <div class="option" data-value="pores">
+                            <img src="img/icons/concerns/pores.svg" alt="Large Pores">
+                            <h3>Large Pores</h3>
+                            <p>Visible pores, especially in T-zone</p>
+                        </div>
+                        <div class="option" data-value="none">
+                            <img src="img/icons/concerns/none.svg" alt="No secondary concern">
+                            <h3>None</h3>
+                            <p>Just focus on my primary concern</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4: Budget -->
+                <div id="q4" class="question hidden-question">
+                    <h2>What is your budget preference?</h2>
+                    <div class="options budget-options">
+                        <div class="option" data-value="budget">
+                            <h3>Budget-friendly</h3>
+                            <p>Affordable options (typically under $20 per product)</p>
+                        </div>
+                        <div class="option" data-value="mid">
+                            <h3>Mid-range</h3>
+                            <p>Balanced quality and price ($20-40 per product)</p>
+                        </div>
+                        <div class="option" data-value="premium">
+                            <h3>Premium</h3>
+                            <p>High-end products (typically $40+ per product)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5: Routine Complexity -->
+                <div id="q5" class="question hidden-question">
+                    <h2>How many steps do you prefer in your routine?</h2>
+                    <div class="options steps-options">
+                        <div class="option" data-value="minimal">
+                            <h3>Minimal (3-4 steps)</h3>
+                            <p>Quick and essential steps only</p>
+                        </div>
+                        <div class="option" data-value="moderate">
+                            <h3>Moderate (5-7 steps)</h3>
+                            <p>Balanced approach with key treatments</p>
+                        </div>
+                        <div class="option" data-value="complete">
+                            <h3>Complete (8-10 steps)</h3>
+                            <p>Full traditional Korean skincare experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="nav-buttons">
+                    <button id="back-btn" class="secondary-btn" disabled>Back</button>
+                    <button id="next-btn" class="primary-btn" disabled>Next</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results" class="hidden-section">
+                <h2>Your Personalized K-Beauty Routine</h2>
+                <div class="result-summary">
+                    <div class="skin-profile">
+                        <h3>Your Skin Profile</h3>
+                        <p><strong>Skin Type:</strong> <span id="result-skin-type">Combination</span></p>
+                        <p><strong>Primary Concern:</strong> <span id="result-primary-concern">Acne</span></p>
+                        <p><strong>Secondary Concern:</strong> <span id="result-secondary-concern">Texture</span></p>
+                    </div>
+                    <div class="routine-summary">
+                        <p>Based on your skin profile, we've created a personalized <span id="result-steps">7-step</span> Korean skincare routine to address your concerns. This routine focuses on <span id="result-focus">balancing oil production while treating and preventing breakouts</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="routine-tabs">
+                    <button id="morning-tab" class="tab-btn active-tab">Morning Routine</button>
+                    <button id="evening-tab" class="tab-btn">Evening Routine</button>
+                </div>
+                
+                <!-- Morning Routine -->
+                <div id="morning-routine" class="routine active-routine">
+                    <div class="steps-container" id="morning-steps">
+                        <!-- Steps will be populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Evening Routine -->
+                <div id="evening-routine" class="routine hidden-routine">
+                    <div class="steps-container" id="evening-steps">
+                        <!-- Steps will be populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="save-btn" class="primary-btn">Save Routine</button>
+                    <button id="restart-btn" class="secondary-btn">Start Over</button>
+                </div>
+            </section>
+
+            <!-- Ingredient Dictionary Section -->
+            <section id="ingredient-dictionary" class="hidden-section">
+                <h2>Ingredient Dictionary</h2>
+                <div class="ingredient-search">
+                    <input type="text" id="ingredient-search" placeholder="Search ingredients..." aria-label="Search ingredients">
+                    <div class="category-filters">
+                        <h3>Filter by Category</h3>
+                        <div class="filter-buttons" id="category-filters">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ingredients-grid" id="ingredients-grid">
+                    <!-- Will be populated dynamically -->
+                </div>
+
+                <div id="ingredient-detail" class="ingredient-detail hidden">
+                    <button class="close-btn" id="close-ingredient-detail">&times;</button>
+                    <div class="ingredient-content">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learn More Section -->
+            <section id="learn-more" class="hidden-section">
+                <h2>Korean Skincare Philosophy</h2>
+                <div class="education-content">
+                    <p>Korean skincare is built on a foundation of gentle, consistent care focused on hydration, prevention, and addressing skin concerns with targeted ingredients.</p>
+                    
+                    <h3>The Philosophy</h3>
+                    <div class="philosophy-cards">
+                        <div class="philosophy-card">
+                            <h4>Prevention First</h4>
+                            <p>Korean approach focuses on preventing skin issues rather than treating them after they appear.</p>
+                        </div>
+                        <div class="philosophy-card">
+                            <h4>Hydration is Key</h4>
+                            <p>Multiple hydrating layers create deeply moisturized, plump skin that's better able to heal and protect itself.</p>
+                        </div>
+                        <div class="philosophy-card">
+                            <h4>Gentle is Better</h4>
+                            <p>Harsh ingredients and quick fixes are avoided in favor of gentle formulations used consistently over time.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>The Steps Explained</h3>
+                    <div class="steps-explanation">
+                        <div class="step-explanation">
+                            <h4>1. Oil Cleanser</h4>
+                            <p>Removes oil-based impurities like sunscreen, makeup and sebum.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>2. Water-Based Cleanser</h4>
+                            <p>Removes water-based impurities like sweat and dirt.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>3. Exfoliator</h4>
+                            <p>Removes dead skin cells to improve texture and product absorption.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>4. Toner</h4>
+                            <p>Balances skin pH and preps for following treatments.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>5. Essence</h4>
+                            <p>Lightweight treatment that hydrates and enhances skin repair.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>6. Treatments (Serums/Ampoules)</h4>
+                            <p>Concentrated formulas targeting specific skin concerns.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>7. Sheet Mask</h4>
+                            <p>Intense hydration and treatment delivery (typically 2-3 times weekly).</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>8. Eye Cream</h4>
+                            <p>Targeted treatment for the delicate eye area.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>9. Moisturizer</h4>
+                            <p>Seals in previous treatments and provides lasting hydration.</p>
+                        </div>
+                        <div class="step-explanation">
+                            <h4>10. Sunscreen (AM)/Sleeping Pack (PM)</h4>
+                            <p>Final protection from UV damage during day or intensive overnight treatment.</p>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Note:</strong> Your personalized routine includes the steps most beneficial for your specific skin concerns and preferences. Not every routine needs all 10 steps!</p>
+                </div>
+                <button id="back-to-results" class="secondary-btn">Back to My Routine</button>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p><small>This tool provides general recommendations only and is not a substitute for professional dermatological advice.</small></p>
+            <div class="footer-links">
+                <a href="#" id="learn-more-link">Learn About K-Beauty</a>
+                <a href="#" id="ingredient-dictionary-link">Ingredient Dictionary</a>
+                <a href="#" id="privacy-link">Privacy Policy</a>
+            </div>
+            <p><small>&copy; 2025 K-Beauty Skincare Advisor</small></p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/ingredient-dictionary.js"></script>
+    
+    <!-- Fallback for browsers without JavaScript -->
+    <noscript>
+        <div class="error-message">
+            This application requires JavaScript to function. Please enable JavaScript in your browser settings to continue.
+        </div>
+    </noscript>
+</body>
+</html>

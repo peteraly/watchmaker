@@ -1,0 +1,441 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Rice Water Bright Light Cleansing Oil",
+      "brand": "The Face Shop",
+      "category": "oil-cleanser",
+      "step": "oil-cleanser",
+      "price": 15.99,
+      "priceCategory": "budget",
+      "size": "150ml",
+      "imageUrl": "img/products/face-shop-cleansing-oil.jpg",
+      "retailerLinks": [
+        {"name": "Amazon", "url": "https://www.amazon.com/Face-Shop-Bright-Cleansing-Ounce/dp/B00809ERAM/"}
+      ],
+      "ingredients": ["rice extract", "jojoba oil", "vitamin E"],
+      "keyIngredient": "rice water extract",
+      "goodFor": ["dry", "combination", "normal", "sensitive", "dullness"],
+      "avoidFor": [],
+      "description": "A lightweight cleansing oil that dissolves makeup and impurities without stripping skin."
+    },
+    {
+      "id": "2",
+      "name": "Clean It Zero Cleansing Balm Original",
+      "brand": "Banila Co",
+      "category": "oil-cleanser",
+      "step": "oil-cleanser",
+      "price": 22.00,
+      "priceCategory": "mid",
+      "size": "100ml",
+      "imageUrl": "img/products/banila-co-clean-it-zero.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/clean-it-zero-cleansing-balm-original-P420604"}
+      ],
+      "ingredients": ["cetyl ethylhexanoate", "vitamin E", "vitamin C"],
+      "keyIngredient": "active herb complex",
+      "goodFor": ["all", "dry", "combination", "oily", "normal", "sensitive"],
+      "avoidFor": [],
+      "description": "Award-winning, sorbet-like cleansing balm that melts away makeup and impurities."
+    },
+    {
+      "id": "3",
+      "name": "Blueberry pH 4.5 Cleansing Foam",
+      "brand": "innisfree",
+      "category": "water-cleanser",
+      "step": "water-cleanser",
+      "price": 11.00,
+      "priceCategory": "budget",
+      "size": "100ml",
+      "imageUrl": "img/products/innisfree-blueberry-cleansing.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/innisfree-blueberry-cleanser-P467158"}
+      ],
+      "ingredients": ["blueberry extract", "raspberry extract"],
+      "keyIngredient": "blueberry extract",
+      "goodFor": ["sensitive", "dry", "normal", "combination"],
+      "avoidFor": ["very oily"],
+      "description": "Low-pH foam cleanser with blueberry extract that cleanses without disrupting skin's natural balance."
+    },
+    {
+      "id": "4",
+      "name": "Enzyme Powder Wash",
+      "brand": "COSRX",
+      "category": "water-cleanser",
+      "step": "water-cleanser",
+      "price": 14.00,
+      "priceCategory": "budget",
+      "size": "50g",
+      "imageUrl": "img/products/cosrx-enzyme-powder.jpg",
+      "retailerLinks": [
+        {"name": "Ulta", "url": "https://www.ulta.com/p/enzyme-powder-cleansing-foam-pimprod2007158"}
+      ],
+      "ingredients": ["papain enzyme", "allantoin"],
+      "keyIngredient": "papain enzyme",
+      "goodFor": ["all", "sensitive", "oily", "combination"],
+      "avoidFor": [],
+      "description": "Gentle powder-to-foam cleanser with papain enzymes for mild daily exfoliation."
+    },
+    {
+      "id": "5",
+      "name": "Hydrating Daily Cleanser",
+      "brand": "LANEIGE",
+      "category": "cleanser",
+      "step": "cleanser",
+      "price": 26.00,
+      "priceCategory": "mid",
+      "size": "150ml",
+      "imageUrl": "img/products/laneige-hydrating-cleanser.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/hydrating-facial-cleanser-P432852"}
+      ],
+      "ingredients": ["glycerin", "ceramides", "hyaluronic acid"],
+      "keyIngredient": "ceramides",
+      "goodFor": ["dry", "normal", "combination", "sensitive"],
+      "avoidFor": ["very oily"],
+      "description": "Gentle, hydrating cleanser that removes impurities without stripping skin's natural moisture."
+    },
+    {
+      "id": "6",
+      "name": "Green Tea Clay Mask",
+      "brand": "innisfree",
+      "category": "exfoliator",
+      "step": "exfoliator",
+      "price": 15.00,
+      "priceCategory": "budget",
+      "size": "100ml",
+      "imageUrl": "img/products/innisfree-green-tea-mask.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/super-volcanic-clusters-pore-clearing-clay-mask-P456394"}
+      ],
+      "ingredients": ["green tea extract", "volcanic clusters"],
+      "keyIngredient": "jeju volcanic clusters",
+      "goodFor": ["oily", "combination", "pores", "texture"],
+      "avoidFor": ["dry", "sensitive"],
+      "description": "Clay mask with Jeju volcanic clusters that deeply cleanses pores and absorbs excess oil."
+    },
+    {
+      "id": "7",
+      "name": "AHA/BHA Clarifying Treatment Toner",
+      "brand": "COSRX",
+      "category": "toner",
+      "step": "toner",
+      "price": 19.00,
+      "priceCategory": "budget",
+      "size": "150ml",
+      "imageUrl": "img/products/cosrx-aha-bha-toner.jpg",
+      "retailerLinks": [
+        {"name": "Ulta", "url": "https://www.ulta.com/p/aha-bha-clarifying-treatment-toner-pimprod2008126"}
+      ],
+      "ingredients": ["AHA", "BHA", "mineral water"],
+      "keyIngredient": "AHA/BHA complex",
+      "goodFor": ["oily", "combination", "acne", "pores", "texture"],
+      "avoidFor": ["very sensitive", "very dry"],
+      "description": "Mildly exfoliating toner that clears pores, gently removes dead skin cells, and balances skin pH."
+    },
+    {
+      "id": "8",
+      "name": "Propolis Synergy Toner",
+      "brand": "COSRX",
+      "category": "toner",
+      "step": "toner",
+      "price": 22.00,
+      "priceCategory": "mid",
+      "size": "150ml",
+      "imageUrl": "img/products/cosrx-propolis-toner.jpg",
+      "retailerLinks": [
+        {"name": "Ulta", "url": "https://www.ulta.com/p/full-fit-propolis-synergy-toner-pimprod2013439"}
+      ],
+      "ingredients": ["propolis extract", "honey extract", "panthenol"],
+      "keyIngredient": "propolis extract",
+      "goodFor": ["dry", "sensitive", "normal", "dullness", "redness"],
+      "avoidFor": [],
+      "description": "Hydrating toner with propolis extract that soothes and nourishes skin."
+    },
+    {
+      "id": "9",
+      "name": "Galactomyces 95 Tone Balancing Essence",
+      "brand": "COSRX",
+      "category": "essence",
+      "step": "essence",
+      "price": 24.00,
+      "priceCategory": "mid",
+      "size": "100ml",
+      "imageUrl": "img/products/cosrx-galactomyces-essence.jpg",
+      "retailerLinks": [
+        {"name": "Ulta", "url": "https://www.ulta.com/p/galactomyces-95-tone-balancing-essence-pimprod2007082"}
+      ],
+      "ingredients": ["galactomyces ferment filtrate", "niacinamide", "panthenol"],
+      "keyIngredient": "galactomyces ferment filtrate 95%",
+      "goodFor": ["all", "dullness", "texture", "hyperpigmentation"],
+      "avoidFor": [],
+      "description": "Lightweight essence with 95% galactomyces ferment filtrate that brightens and balances skin tone."
+    },
+    {
+      "id": "10",
+      "name": "Snail 96 Mucin Power Essence",
+      "brand": "COSRX",
+      "category": "essence",
+      "step": "essence",
+      "price": 25.00,
+      "priceCategory": "mid",
+      "size": "100ml",
+      "imageUrl": "img/products/cosrx-snail-essence.jpg",
+      "retailerLinks": [
+        {"name": "Ulta", "url": "https://www.ulta.com/p/advanced-snail-96-mucin-power-essence-pimprod2007144"}
+      ],
+      "ingredients": ["snail secretion filtrate", "hyaluronic acid", "arginine"],
+      "keyIngredient": "96% snail mucin",
+      "goodFor": ["all", "sensitive", "dry", "acne", "redness", "texture"],
+      "avoidFor": [],
+      "description": "Lightweight essence with 96% snail secretion filtrate that repairs, hydrates, and soothes damaged skin."
+    },
+    {
+      "id": "11",
+      "name": "Watermelon Glow Niacinamide Dew Drops",
+      "brand": "Glow Recipe",
+      "category": "serum",
+      "step": "serum",
+      "price": 34.00,
+      "priceCategory": "mid",
+      "size": "40ml",
+      "imageUrl": "img/products/glow-recipe-dew-drops.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/glow-recipe-watermelon-glow-niacinamide-dew-drops-P466123"}
+      ],
+      "ingredients": ["niacinamide", "watermelon extract", "hyaluronic acid"],
+      "keyIngredient": "niacinamide",
+      "goodFor": ["all", "dullness", "pores", "hyperpigmentation"],
+      "avoidFor": [],
+      "description": "Niacinamide serum that brightens, hydrates, and gives skin a reflective glow without glitter or mica."
+    },
+    {
+      "id": "12",
+      "name": "Glass Skin Refining Serum",
+      "brand": "Peach & Lily",
+      "category": "serum",
+      "step": "serum",
+      "price": 39.00,
+      "priceCategory": "mid",
+      "size": "40ml",
+      "imageUrl": "img/products/peach-lily-glass-skin.jpg",
+      "retailerLinks": [
+        {"name": "Ulta", "url": "https://www.ulta.com/p/glass-skin-refining-serum-pimprod2002960"}
+      ],
+      "ingredients": ["peach extract", "niacinamide", "peptides", "hyaluronic acid"],
+      "keyIngredient": "peptide complex",
+      "goodFor": ["all", "dry", "dullness", "texture", "fine lines"],
+      "avoidFor": [],
+      "description": "Multi-tasking serum that creates the appearance of glass skin by hydrating, calming, and brightening."
+    },
+    {
+      "id": "13",
+      "name": "Tea Tree Relief Serum",
+      "brand": "iUNIK",
+      "category": "treatment",
+      "step": "treatment",
+      "price": 17.00,
+      "priceCategory": "budget",
+      "size": "50ml",
+      "imageUrl": "img/products/iunik-tea-tree-serum.jpg",
+      "retailerLinks": [
+        {"name": "Amazon", "url": "https://www.amazon.com/iUNIK-Tea-Tree-Relief-Serum/dp/B07648Y4RX/"}
+      ],
+      "ingredients": ["tea tree leaf extract", "centella asiatica", "portulaca oleracea extract"],
+      "keyIngredient": "67% tea tree leaf water",
+      "goodFor": ["oily", "combination", "acne", "redness", "pores"],
+      "avoidFor": ["very dry"],
+      "description": "Lightweight serum with tea tree extract that calms inflamed skin and treats blemishes without irritation."
+    },
+    {
+      "id": "14",
+      "name": "Cica Clear Patch",
+      "brand": "COSRX",
+      "category": "treatment",
+      "step": "treatment",
+      "price": 13.00,
+      "priceCategory": "budget",
+      "size": "18 patches",
+      "imageUrl": "img/products/cosrx-acne-patches.jpg",
+      "retailerLinks": [
+        {"name": "Ulta", "url": "https://www.ulta.com/p/acne-pimple-master-patch-pimprod2007141"}
+      ],
+      "ingredients": ["hydrocolloid"],
+      "keyIngredient": "hydrocolloid",
+      "goodFor": ["all", "acne"],
+      "avoidFor": [],
+      "description": "Hydrocolloid patches that absorb pus and sebum from pimples while protecting them from bacteria and further irritation."
+    },
+    {
+      "id": "15",
+      "name": "Hyaluronic Acid Sheet Mask",
+      "brand": "Mediheal",
+      "category": "sheet-mask",
+      "step": "sheet-mask",
+      "price": 3.00,
+      "priceCategory": "budget",
+      "size": "1 mask",
+      "imageUrl": "img/products/mediheal-hyaluronic-mask.jpg",
+      "retailerLinks": [
+        {"name": "Amazon", "url": "https://www.amazon.com/MEDIHEAL-ampoule-Moisture-Hydrating-original/dp/B0865MTDYQ/"}
+      ],
+      "ingredients": ["hyaluronic acid", "aquaxyl", "ceramide"],
+      "keyIngredient": "hyaluronic acid complex",
+      "goodFor": ["all", "dry", "dehydrated", "sensitive"],
+      "avoidFor": [],
+      "description": "Intensely hydrating sheet mask with hyaluronic acid that replenishes moisture and plumps skin."
+    },
+    {
+      "id": "16",
+      "name": "Centella Asiatica Sheet Mask",
+      "brand": "Dr. Jart+",
+      "category": "sheet-mask",
+      "step": "sheet-mask",
+      "price": 9.00,
+      "priceCategory": "mid",
+      "size": "1 mask",
+      "imageUrl": "img/products/dr-jart-cicapair-mask.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/cicapair-tiger-grass-calming-gel-cream-P432327"}
+      ],
+      "ingredients": ["centella asiatica extract", "panthenol", "madecassoside"],
+      "keyIngredient": "Centella Rx complex",
+      "goodFor": ["sensitive", "redness", "acne", "irritation"],
+      "avoidFor": [],
+      "description": "Soothing sheet mask with centella asiatica that calms irritated, red skin and supports its natural barrier."
+    },
+    {
+      "id": "17",
+      "name": "Eye Sleeping Mask",
+      "brand": "LANEIGE",
+      "category": "eye-cream",
+      "step": "eye-cream",
+      "price": 34.00,
+      "priceCategory": "mid",
+      "size": "25ml",
+      "imageUrl": "img/products/laneige-eye-sleeping-mask.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/eye-sleeping-mask-P420830"}
+      ],
+      "ingredients": ["caffeine", "vitamin P", "ceramide"],
+      "keyIngredient": "eye moisture technology",
+      "goodFor": ["all", "dryness", "puffiness", "fine lines"],
+      "avoidFor": [],
+      "description": "Overnight eye mask with moisture wrap technology that revitalizes and deeply hydrates the delicate eye area."
+    },
+    {
+      "id": "18",
+      "name": "Ginseng Eye Cream",
+      "brand": "Sulwhasoo",
+      "category": "eye-cream",
+      "step": "eye-cream",
+      "price": 60.00,
+      "priceCategory": "premium",
+      "size": "20ml",
+      "imageUrl": "img/products/sulwhasoo-ginseng-eye-cream.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/concentrated-ginseng-renewing-eye-cream-P408606"}
+      ],
+      "ingredients": ["ginseng extract", "honey", "peptides"],
+      "keyIngredient": "concentrated ginseng extract",
+      "goodFor": ["all", "aging", "fine lines", "dark circles"],
+      "avoidFor": [],
+      "description": "Anti-aging eye cream with concentrated ginseng extract that firms, brightens, and reduces fine lines around the eyes."
+    },
+    {
+      "id": "19",
+      "name": "Water Cream",
+      "brand": "Tatcha",
+      "category": "moisturizer",
+      "step": "moisturizer",
+      "price": 68.00,
+      "priceCategory": "premium",
+      "size": "50ml",
+      "imageUrl": "img/products/tatcha-water-cream.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/the-water-cream-P418218"}
+      ],
+      "ingredients": ["japanese wild rose", "leopard lily", "green tea"],
+      "keyIngredient": "Hadasei-3 complex",
+      "goodFor": ["oily", "combination", "normal", "pores"],
+      "avoidFor": ["very dry"],
+      "description": "Oil-free, water-light cream that minimizes pores, controls oil, and provides nutrient-rich hydration."
+    },
+    {
+      "id": "20",
+      "name": "Water Sleeping Mask",
+      "brand": "LANEIGE",
+      "category": "moisturizer",
+      "step": "moisturizer",
+      "price": 29.00,
+      "priceCategory": "mid",
+      "size": "70ml",
+      "imageUrl": "img/products/laneige-water-sleeping-mask.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/water-sleeping-mask-P420651"}
+      ],
+      "ingredients": ["hydro ionized mineral water", "evening primrose root extract", "hunza apricot extract"],
+      "keyIngredient": "moisture wrap technology",
+      "goodFor": ["all", "dry", "dehydrated", "dullness"],
+      "avoidFor": [],
+      "description": "Overnight gel mask that deeply hydrates, revitalizes, and brightens skin while you sleep."
+    },
+    {
+      "id": "21",
+      "name": "Snail All in One Cream",
+      "brand": "Mizon",
+      "category": "moisturizer",
+      "step": "moisturizer",
+      "price": 18.00,
+      "priceCategory": "budget",
+      "size": "75ml",
+      "imageUrl": "img/products/mizon-snail-cream.jpg",
+      "retailerLinks": [
+        {"name": "Amazon", "url": "https://www.amazon.com/MIZON-Snail-Cream-Tube-Type/dp/B00AF63QQE/"}
+      ],
+      "ingredients": ["snail secretion filtrate", "peptides", "adenosine"],
+      "keyIngredient": "92% snail mucin",
+      "goodFor": ["all", "sensitive", "acne", "aging", "texture"],
+      "avoidFor": [],
+      "description": "All-in-one cream with 92% snail mucin that repairs damaged skin, improves texture, and provides balanced hydration."
+    },
+    {
+      "id": "22",
+      "name": "Daily UV Defense Sunscreen SPF 36",
+      "brand": "innisfree",
+      "category": "sunscreen",
+      "step": "sunscreen",
+      "price": 15.00,
+      "priceCategory": "budget",
+      "size": "50ml",
+      "imageUrl": "img/products/innisfree-daily-sunscreen.jpg",
+      "retailerLinks": [
+        {"name": "Sephora", "url": "https://www.sephora.com/product/daily-uv-defense-sunscreen-broad-spectrum-spf-36-P456392"}
+      ],
+      "ingredients": ["sunflower seed oil", "green tea extract", "jeju tea"],
+      "keyIngredient": "green tea extract",
+      "goodFor": ["all", "sensitive"],
+      "avoidFor": [],
+      "description": "Lightweight, hydrating sunscreen with SPF 36 that protects skin from UV damage without leaving a white cast."
+    },
+    {
+      "id": "23",
+      "name": "Beauty of Joseon Relief Sun SPF 50+",
+      "brand": "Beauty of Joseon",
+      "category": "sunscreen",
+      "step": "sunscreen",
+      "price": 18.00,
+      "priceCategory": "budget",
+      "size": "50ml",
+      "imageUrl": "img/products/beauty-of-joseon-sunscreen.jpg",
+      "retailerLinks": [
+        {"name": "Amazon", "url": "https://www.amazon.com/Beauty-Joseon-Relief-Protection-Sunscreen/dp/B09JYVB3F9/"}
+      ],
+      "ingredients": ["rice extract", "probiotics", "grain ferment extracts"],
+      "keyIngredient": "rice extract and probiotics",
+      "goodFor": ["all", "sensitive", "dry"],
+      "avoidFor": [],
+      "description": "Gentle, moisturizing sunscreen with SPF 50+ PA++++ that provides high UV protection with a lightweight texture."
+    }
+  ]
+ }
