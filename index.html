@@ -261,18 +261,39 @@
             <!-- Ingredient Dictionary Section -->
             <section id="ingredient-dictionary" class="hidden-section">
                 <h2>Ingredient Dictionary</h2>
-                <div class="ingredient-search">
-                    <input type="text" id="ingredient-search" placeholder="Search ingredients..." aria-label="Search ingredients">
-                    <div class="category-filters">
-                        <h3>Filter by Category</h3>
-                        <div class="filter-buttons" id="category-filters">
-                            <!-- Will be populated dynamically -->
+                
+                <!-- Tab Navigation -->
+                <div class="dictionary-tabs">
+                    <button class="tab-btn active" data-tab="ingredients">Ingredients List</button>
+                    <button class="tab-btn" data-tab="combinations">Ingredient Combinations</button>
+                    <button class="tab-btn" data-tab="concerns">Skin Concerns</button>
+                </div>
+
+                <!-- Ingredients Tab -->
+                <div class="tab-content active" id="ingredients-tab">
+                    <div class="ingredient-search">
+                        <input type="text" id="ingredient-search" placeholder="Search ingredients..." aria-label="Search ingredients">
+                        <div class="category-filters">
+                            <h3>Filter by Category</h3>
+                            <div class="filter-buttons" id="category-filters">
+                                <!-- Will be populated dynamically -->
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="ingredients-grid" id="ingredients-grid">
+                        <!-- Will be populated dynamically -->
+                    </div>
                 </div>
-                
-                <div class="ingredients-grid" id="ingredients-grid">
-                    <!-- Will be populated dynamically -->
+
+                <!-- Combinations Tab -->
+                <div class="tab-content" id="combinations-tab">
+                    <!-- Will be populated with combination guide content -->
+                </div>
+
+                <!-- Skin Concerns Tab -->
+                <div class="tab-content" id="concerns-tab">
+                    <!-- Will be populated with skin concerns guide content -->
                 </div>
 
                 <div id="ingredient-detail" class="ingredient-detail hidden">

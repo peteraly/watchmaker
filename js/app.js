@@ -84,20 +84,20 @@ document.addEventListener('DOMContentLoaded', function() {
   
   nextBtn.addEventListener('click', async function() {
     if (currentQuestion < totalQuestions) {
-        questions[currentQuestion-1].classList.remove('active-question');
-        questions[currentQuestion-1].classList.add('hidden-question');
-        currentQuestion++;
-        questions[currentQuestion-1].classList.remove('hidden-question');
-        questions[currentQuestion-1].classList.add('active-question');
-        
-        backBtn.disabled = false;
-        nextBtn.disabled = !hasSelection(currentQuestion);
-        updateProgressBar();
+      questions[currentQuestion-1].classList.remove('active-question');
+      questions[currentQuestion-1].classList.add('hidden-question');
+      currentQuestion++;
+      questions[currentQuestion-1].classList.remove('hidden-question');
+      questions[currentQuestion-1].classList.add('active-question');
+      
+      backBtn.disabled = false;
+      nextBtn.disabled = !hasSelection(currentQuestion);
+      updateProgressBar();
     } else {
-        // Last question completed, generate results
-        assessmentSection.classList.remove('active-section');
-        assessmentSection.classList.add('hidden-section');
-        
+      // Last question completed, generate results
+      assessmentSection.classList.remove('active-section');
+      assessmentSection.classList.add('hidden-section');
+      
         try {
             // Show loading state
             const loadingEl = document.createElement('div');
@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 displayResults(routine);
                 
                 // Show results section
-                resultsSection.classList.remove('hidden-section');
-                resultsSection.classList.add('active-section');
+      resultsSection.classList.remove('hidden-section');
+      resultsSection.classList.add('active-section');
             } else {
                 throw new Error('Failed to generate routine');
             }
@@ -344,9 +344,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Get routine steps
-        const morningSteps = getRoutineSteps('morning', userSelections.steps);
-        const eveningSteps = getRoutineSteps('evening', userSelections.steps);
-        
+      const morningSteps = getRoutineSteps('morning', userSelections.steps);
+      const eveningSteps = getRoutineSteps('evening', userSelections.steps);
+      
         // Generate morning routine
         const morningRoutine = morningSteps.map(step => {
             const product = findBestProduct(products, step, userSelections);
@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return { morning: morningRoutine, evening: eveningRoutine };
     } catch (error) {
-        console.error('Error generating routine:', error);
+      console.error('Error generating routine:', error);
         throw error;
     }
   }
@@ -389,13 +389,13 @@ document.addEventListener('DOMContentLoaded', function() {
   function loadProductDatabase() {
     return new Promise((resolve, reject) => {
         fetch('/data/products.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to load product database');
-                }
-                return response.json();
-            })
-            .then(data => {
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to load product database');
+        }
+        return response.json();
+      })
+      .then(data => {
                 if (!data || !data.products || !Array.isArray(data.products)) {
                     throw new Error('Invalid product data format');
                 }
@@ -467,16 +467,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function filterProducts(products, selections) {
     return products.filter(product => {
-        // Budget filter
+      // Budget filter
         if (!isWithinBudget(product, selections.budget)) {
-            return false;
-        }
+        return false;
+      }
         
         // Skin type compatibility - only filter out if explicitly listed as avoid
         if (product.avoidFor && product.avoidFor.includes(selections.skinType)) {
-            return false;
-        }
-
+        return false;
+      }
+      
         // If product is specifically good for user's skin type or concerns, boost its score
         if (product.goodFor && (
             product.goodFor.includes(selections.skinType) ||
@@ -714,9 +714,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function findBestProduct(products, stepCategory, selections) {
     if (!products || !Array.isArray(products) || products.length === 0) {
         console.warn(`No products available for ${stepCategory}`);
-        return null;
+      return null;
     }
-
+    
     // Filter products by category
     let categoryProducts = products.filter(p => p && (
         p.category === stepCategory || 
@@ -793,7 +793,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return products.map(product => {
         if (!product) return { product, score: 0 };
         
-        let score = 0;
+      let score = 0;
         const maxScore = 100;
         
         // Base compatibility score (30%)
@@ -961,7 +961,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (selections.primaryConcern === 'dryness') {
             reason += ` while deeply hydrating and preventing moisture loss`;
         } else {
-            reason += ` while targeting your ${selections.primaryConcern} concerns`;
+      reason += ` while targeting your ${selections.primaryConcern} concerns`;
         }
     }
     
@@ -970,7 +970,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (selections.secondaryConcern === 'pores') {
             reason += ` and helping to refine pore appearance without drying`;
         } else {
-            reason += ` and helping with ${selections.secondaryConcern}`;
+      reason += ` and helping with ${selections.secondaryConcern}`;
         }
     }
     
@@ -1059,9 +1059,9 @@ document.addEventListener('DOMContentLoaded', function() {
         routine.morning.forEach((routineItem, index) => {
             if (routineItem && routineItem.step && routineItem.product) {
                 const stepElement = createStepElement(routineItem, index + 1);
-                morningStepsContainer.appendChild(stepElement);
+        morningStepsContainer.appendChild(stepElement);
             }
-        });
+      });
     } else {
         morningStepsContainer.innerHTML = '<p class="no-steps">No morning steps available for your selections.</p>';
     }
@@ -1071,9 +1071,9 @@ document.addEventListener('DOMContentLoaded', function() {
         routine.evening.forEach((routineItem, index) => {
             if (routineItem && routineItem.step && routineItem.product) {
                 const stepElement = createStepElement(routineItem, index + 1);
-                eveningStepsContainer.appendChild(stepElement);
+        eveningStepsContainer.appendChild(stepElement);
             }
-        });
+      });
     } else {
         eveningStepsContainer.innerHTML = '<p class="no-steps">No evening steps available for your selections.</p>';
     }
@@ -1085,26 +1085,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     stepDiv.innerHTML = `
         <div class="step-number">${stepNumber}</div>
-        <div class="step-content">
-            <h3>${getStepTitle(routineItem.step)}</h3>
-            <div class="product-info">
+      <div class="step-content">
+        <h3>${getStepTitle(routineItem.step)}</h3>
+        <div class="product-info">
                 <img src="${routineItem.product.imageUrl}" alt="${routineItem.product.name}" class="product-image">
-                <div class="product-details">
+          <div class="product-details">
                     <h4>${routineItem.product.name}</h4>
                     <p class="brand">${routineItem.product.brand}</p>
                     <p class="price">$${routineItem.product.price.toFixed(2)}</p>
-                </div>
-            </div>
-            <div class="product-benefits">
+          </div>
+        </div>
+        <div class="product-benefits">
                 <h4>Why This Product</h4>
-                <p>${routineItem.why}</p>
-            </div>
+          <p>${routineItem.why}</p>
+        </div>
             ${routineItem.product.retailerLinks ? `
                 <a href="${routineItem.product.retailerLinks[0].url}" target="_blank" class="shop-btn">
                     Shop at ${routineItem.product.retailerLinks[0].name}
                 </a>
             ` : ''}
-        </div>
+      </div>
     `;
     
     return stepDiv;
@@ -1301,7 +1301,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'cleanser': {
             name: "Gentle Hydrating Cleanser",
             brand: "COSRX",
-            category: "cleanser",
+        category: "cleanser",
             price: 15.99,
             imageUrl: "/img/products/product-placeholder.svg",
             goodFor: ["all", "sensitive", "dry"],
@@ -1310,7 +1310,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'oil-cleanser': {
             name: "Rice Water Bright Cleansing Oil",
             brand: "The Face Shop",
-            category: "oil-cleanser",
+        category: "oil-cleanser",
             price: 15.99,
             imageUrl: "/img/products/face-shop-cleansing-oil.jpg",
             goodFor: ["all", "dry", "sensitive"],
@@ -1319,7 +1319,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'water-cleanser': {
             name: "Blueberry pH 4.5 Cleansing Foam",
             brand: "innisfree",
-            category: "water-cleanser",
+        category: "water-cleanser",
             price: 11.00,
             imageUrl: "/img/products/innisfree-blueberry-cleansing.jpg",
             goodFor: ["all", "sensitive"],
@@ -1384,7 +1384,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const eveningRoutine = eveningSteps.map(step => ({
         step,
-        product: fallbackProducts[step],
+          product: fallbackProducts[step],
         timeOfDay: 'evening',
         why: `A gentle ${step} suitable for ${userSelections.skinType} skin`
     }));

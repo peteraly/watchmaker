@@ -15,6 +15,11 @@ class IngredientDictionary {
             this.ingredientDetail = document.getElementById('ingredient-detail');
             this.closeDetailBtn = document.getElementById('close-ingredient-detail');
             
+            // Tab elements
+            this.tabButtons = document.querySelectorAll('.dictionary-tab-btn');
+            this.tabContents = document.querySelectorAll('.dictionary-tab-content');
+            this.currentTab = 'ingredients';
+            
             // Add education button
             this.educationBtn = document.createElement('button');
             this.educationBtn.className = 'education-btn';
@@ -49,6 +54,10 @@ class IngredientDictionary {
             this.setupEventListeners();
             this.renderCategoryFilters();
             this.renderIngredients();
+            
+            // Initialize tabs
+            this.setupTabs();
+            this.populateTabContent();
             
             // Add buttons after search
             const buttonContainer = document.createElement('div');
@@ -826,6 +835,204 @@ class IngredientDictionary {
             ingredients,
             categories
         });
+    }
+
+    setupTabs() {
+        this.tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.dataset.tab;
+                this.switchTab(tabName);
+            });
+        });
+    }
+
+    switchTab(tabName) {
+        this.currentTab = tabName;
+        
+        // Update active states
+        this.tabButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.tab === tabName);
+        });
+        
+        this.tabContents.forEach(content => {
+            content.classList.toggle('active', content.dataset.tab === tabName);
+        });
+
+        // Populate content if needed
+        if (tabName === 'combinations' || tabName === 'concerns') {
+            this.populateTabContent();
+        }
+    }
+
+    populateTabContent() {
+        const combinationsTab = document.querySelector('[data-tab="combinations"]');
+        const concernsTab = document.querySelector('[data-tab="concerns"]');
+
+        if (this.currentTab === 'combinations' && !combinationsTab.hasChildNodes()) {
+            combinationsTab.innerHTML = this.getCombinationsContent();
+        }
+
+        if (this.currentTab === 'concerns' && !concernsTab.hasChildNodes()) {
+            concernsTab.innerHTML = this.getConcernsContent();
+        }
+
+        // Add click handlers for ingredient tags
+        document.querySelectorAll('.ingredient-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                const ingredientName = tag.textContent.trim();
+                const ingredient = this.ingredients.find(i => i.name === ingredientName);
+                if (ingredient) {
+                    this.showIngredientDetail(ingredient.id);
+                }
+            });
+        });
+    }
+
+    getCombinationsContent() {
+        return `
+            <div class="combo-grid">
+                <div class="combo-card">
+                    <h4>Hydration Boost</h4>
+                    <div class="ingredients">
+                        <span class="ingredient-tag">Hyaluronic Acid</span>
+                        <span class="ingredient-tag">Glycerin</span>
+                        <span class="ingredient-tag">Ceramides</span>
+                    </div>
+                    <p>Perfect combination for deep hydration and moisture barrier repair.</p>
+                </div>
+                <div class="combo-card">
+                    <h4>Anti-Aging Power</h4>
+                    <div class="ingredients">
+                        <span class="ingredient-tag">Retinol</span>
+                        <span class="ingredient-tag">Peptides</span>
+                        <span class="ingredient-tag">Vitamin C</span>
+                    </div>
+                    <p>Powerful anti-aging combination that targets multiple signs of aging.</p>
+                </div>
+                <div class="combo-card">
+                    <h4>Brightening Complex</h4>
+                    <div class="ingredients">
+                        <span class="ingredient-tag">Vitamin C</span>
+                        <span class="ingredient-tag">Niacinamide</span>
+                        <span class="ingredient-tag">Alpha Arbutin</span>
+                    </div>
+                    <p>Synergistic combination for evening skin tone and boosting radiance.</p>
+                </div>
+            </div>
+            <div class="layering-steps">
+                <h3>Proper Layering Guide</h3>
+                <div class="layer-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Cleansing</h4>
+                        <p>Start with a gentle cleanser appropriate for your skin type.</p>
+                    </div>
+                </div>
+                <div class="layer-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Toning</h4>
+                        <p>Balance pH levels and prep skin for treatments.</p>
+                    </div>
+                </div>
+                <div class="layer-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Treatment</h4>
+                        <p>Apply active ingredients from thinnest to thickest consistency.</p>
+                    </div>
+                </div>
+                <div class="layer-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Moisturizing</h4>
+                        <p>Lock in treatments and provide hydration.</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    getConcernsContent() {
+        return `
+            <div class="concerns-grid">
+                <div class="concern-card">
+                    <h3>Acne-Prone Skin</h3>
+                    <div class="key-ingredients">
+                        <h4>Key Ingredients:</h4>
+                        <div class="ingredient-tags">
+                            <span class="ingredient-tag">Salicylic Acid</span>
+                            <span class="ingredient-tag">Niacinamide</span>
+                            <span class="ingredient-tag">Tea Tree</span>
+                        </div>
+                    </div>
+                    <div class="routine-tips">
+                        <h4>Routine Tips:</h4>
+                        <ul>
+                            <li>Double cleanse in the evening</li>
+                            <li>Use non-comedogenic products</li>
+                            <li>Don't over-exfoliate</li>
+                        </ul>
+                    </div>
+                    <div class="avoid-ingredients">
+                        <h4>Ingredients to Avoid:</h4>
+                        <div class="ingredient-tags">
+                            <span class="ingredient-tag">Heavy Oils</span>
+                            <span class="ingredient-tag">Alcohol</span>
+                            <span class="ingredient-tag">Fragrance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="concern-card">
+                    <h3>Aging Skin</h3>
+                    <div class="key-ingredients">
+                        <h4>Key Ingredients:</h4>
+                        <div class="ingredient-tags">
+                            <span class="ingredient-tag">Retinol</span>
+                            <span class="ingredient-tag">Peptides</span>
+                            <span class="ingredient-tag">Vitamin C</span>
+                        </div>
+                    </div>
+                    <div class="routine-tips">
+                        <h4>Routine Tips:</h4>
+                        <ul>
+                            <li>Use gentle, hydrating cleansers</li>
+                            <li>Layer hydrating products</li>
+                            <li>Always use sunscreen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="concern-card">
+                    <h3>Sensitive Skin</h3>
+                    <div class="key-ingredients">
+                        <h4>Key Ingredients:</h4>
+                        <div class="ingredient-tags">
+                            <span class="ingredient-tag">Centella Asiatica</span>
+                            <span class="ingredient-tag">Ceramides</span>
+                            <span class="ingredient-tag">Green Tea</span>
+                        </div>
+                    </div>
+                    <div class="routine-tips">
+                        <h4>Routine Tips:</h4>
+                        <ul>
+                            <li>Patch test new products</li>
+                            <li>Avoid harsh exfoliants</li>
+                            <li>Focus on barrier repair</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tips-section">
+                <h3>General Skincare Tips</h3>
+                <ul class="tips-list">
+                    <li>Always apply products in order of thinnest to thickest consistency</li>
+                    <li>Wait 1-2 minutes between applying different active ingredients</li>
+                    <li>Use sunscreen daily, even on cloudy days</li>
+                    <li>Stay hydrated and maintain a healthy diet</li>
+                    <li>Clean your pillowcase and phone screen regularly</li>
+                </ul>
+            </div>
+        `;
     }
 }
 
